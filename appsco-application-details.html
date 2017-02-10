@@ -110,6 +110,17 @@ Custom property | Description | Default
                 </div>
             </div>
 
+            <template is="dom-if" if="[[!application.owner]]">
+                <div>
+                    <div label>Owner</div>
+                    <div content>
+                        <div class="flex">
+                            [[ application.application.added_by.email ]]
+                        </div>
+                    </div>
+                </div>
+            </template>
+
             <div label>Note</div>
             <div content>
                 <div class="flex">
